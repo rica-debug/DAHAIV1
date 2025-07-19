@@ -1,0 +1,265 @@
+/* Estilos generales del header */
+.header {
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1000;
+}
+
+/* Sección superior (contacto y redes sociales) */
+.header .d1 {
+    background-color: #f8f8f8;
+    padding: 10px 0;
+}
+
+.header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header .l, .header .r {
+    display: flex;
+    align-items: center;
+}
+
+.header .l a, .header .r a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    margin-right: 20px;
+}
+
+.header .l a:last-child, .header .r a:last-child {
+    margin-right: 0;
+}
+
+.header .l a img, .header .r a img {
+    margin-right: 8px;
+    height: 16px;
+}
+
+.header .r .btn {
+    background-color: #2a7fba;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.header .r .btn img {
+    filter: brightness(0) invert(1);
+}
+
+.header .r .icon {
+    margin-right: 15px;
+}
+
+/* Sección principal del header (logo y navegación) */
+.header .d2 {
+    background-color: white;
+    padding: 15px 0;
+}
+
+.header .d2 .l {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.header .logo img {
+    height: 40px;
+    margin-right: 30px;
+}
+
+.header .links {
+    display: flex;
+}
+
+.header .item {
+    position: relative;
+    margin-right: 25px;
+}
+
+.header .a1 {
+    display: flex;
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 0;
+}
+
+.header .a1 p {
+    margin: 0;
+}
+
+.header .a1 img {
+    margin-left: 5px;
+    transition: transform 0.3s;
+}
+
+.header .item:hover .a1 img {
+    transform: rotate(180deg);
+}
+
+.header .aList {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    z-index: 100;
+    min-width: 180px;
+}
+
+.header .item:hover .aList {
+    opacity: 1;
+    visibility: visible;
+}
+
+.header .box a {
+    display: block;
+    padding: 8px 20px;
+    color: #555;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.header .box a:hover {
+    color: #2a7fba;
+    background-color: #f5f5f5;
+}
+
+/* Barra de búsqueda y selector de idioma */
+.header .d2 .r {
+    display: flex;
+    align-items: center;
+}
+
+.header .search {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin-right: 20px;
+}
+
+.header .search input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    min-width: 200px;
+}
+
+.header .search a {
+    color: #555;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.header .language {
+    position: relative;
+}
+
+.header .l1 {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header .l1 p {
+    margin: 0 0 0 5px;
+}
+
+.header .language a {
+    position: absolute;
+    left: 0;
+    background: white;
+    padding: 5px 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    text-decoration: none;
+    color: #333;
+    white-space: nowrap;
+}
+
+.header .language:hover a {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Header para móvil */
+.pheader {
+    display: none;
+    padding: 15px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.pheader .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pheader .search {
+    position: relative;
+    flex-grow: 1;
+    margin: 0 15px;
+}
+
+.pheader .search input {
+    width: 100%;
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+.pheader .icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pheader .navbox {
+    width: 25px;
+    cursor: pointer;
+}
+
+.pheader .line {
+    height: 2px;
+    background: #333;
+    margin: 5px 0;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .header {
+        display: none;
+    }
+    
+    .pheader {
+        display: block;
+    }
+}

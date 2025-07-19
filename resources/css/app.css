@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+@layer base {
+    body.dahai-theme {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+}
+
+@layer components {
+    .headerelement {
+        @apply relative w-full;
+    }
+
+    .headerelement-video {
+        @apply w-full h-screen overflow-hidden;
+    }
+
+    .headerelement-title {
+        @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white;
+    }
+
+    .headerelement-title .t1 {
+        @apply text-4xl md:text-6xl font-bold mb-4;
+    }
+
+    .headerelement-title .t2 {
+        @apply text-xl md:text-2xl;
+    }
+
+    .mainContainer {
+        @apply container mx-auto px-4;
+    }
+
+    .about {
+        @apply py-16;
+    }
+
+    .about .t {
+        @apply flex items-center gap-4 mb-8;
+    }
+
+    .about .title {
+        @apply text-3xl md:text-5xl font-bold mb-4;
+    }
+
+    .about .des p {
+        @apply mb-4;
+    }
+
+    .about .btn a {
+        @apply inline-block px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition;
+    }
+}
+
+/* Additional custom styles can be added here */

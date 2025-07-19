@@ -1,0 +1,9 @@
+/* Estilos base */
+body.dahai-theme {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header y footer heredarán sus estilos de tus partials */
